@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Partidas do time - Portal Brasileirão">
+    <title>Partidas - Portal Brasileirão</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <!-- Cabeçalho Principal -->
+    <header class="cabecalho">
+        <div class="container-cabecalho">
+            <div class="logo-secao">
+                <a href="../index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
+                    <img src="../Imagens/logo.png" alt="Logo Portal Brasileirão" class="logo">
+                    <h1 class="titulo-principal">Portal Brasileirão</h1>
+                </a>
+            </div>
+            <nav class="navegacao-principal">
+                <ul class="menu-navegacao">
+                    <li><a href="../index.html">Início</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Conteúdo Principal -->
+    <main class="conteudo-principal">
+        <section class="secao-partidas">
+            <div class="container">
+                <button class="botao-voltar" onclick="window.history.back()" title="Voltar para página anterior">
+                    <span>← Voltar</span>
+                </button>
+
+                <h2 class="titulo-pagina">Partidas - <span id="nome-time-partidas">Carregando...</span></h2>
+
+                <!-- Abas de Filtro -->
+                <div class="abas-partidas">
+                    <button class="aba-partida ativa" data-aba="proximas" id="aba-proximas">
+                        <span>Próximas</span>
+                    </button>
+                    <button class="aba-partida" data-aba="ultimas" id="aba-ultimas">
+                        <span>Últimas</span>
+                    </button>
+                </div>
+
+                <!-- Lista de Partidas -->
+                <div id="lista-partidas" class="lista-partidas-completa">
+                    <p class="mensagem-carregamento">Carregando partidas...</p>
+                </div>
+
+                <!-- Mensagem de Nenhum Resultado -->
+                <div id="mensagem-sem-partidas" class="mensagem-carregamento oculto">
+                    <p>Nenhuma partida encontrada.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="secao-rodape">
+                <h5 class="titulo-rodape">Sobre o Projeto</h5>
+                <p class="texto-rodape">Portal Brasileirão é um projeto desenvolvido para a disciplina de Desenvolvimento Web do Professor Fabio, criado por Marcelo.</p>
+            </div>
+            <div class="secao-rodape">
+                <h5 class="titulo-rodape">Tecnologias</h5>
+                <ul class="lista-rodape">
+                    <li><span>HTML5</span></li>
+                    <li><span>CSS3</span></li>
+                    <li><span>JavaScript</span></li>
+                    <li><span>API football-data.org</span></li>
+                </ul>
+            </div>
+            <div class="secao-rodape">
+                <h5 class="titulo-rodape">Links Úteis</h5>
+                <ul class="lista-rodape">
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rodape-inferior">
+            <p class="texto-copyright">&copy; 2026 Portal Brasileirão. Desenvolvido por Marcelo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../script.js"></script>
+    <script src="script-paginas.js"></script>
+</body>
+</html>

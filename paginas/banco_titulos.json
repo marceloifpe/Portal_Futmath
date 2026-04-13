@@ -1,0 +1,157 @@
+{
+  "SC Corinthians Paulista": {
+    "historicoTitulos": [
+      { "nome": "Mundial de Clubes da FIFA", "quantidade": 2, "ultimoAno": 2012 },
+      { "nome": "Copa Libertadores", "quantidade": 1, "ultimoAno": 2012 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 7, "ultimoAno": 2017 },
+      { "nome": "Copa do Brasil", "quantidade": 4, "ultimoAno": 2025 },
+      { "nome": "Campeonato Paulista", "quantidade": 31, "ultimoAno": 2025 }
+    ]
+  },
+  "CR Flamengo": {
+    "historicoTitulos": [
+      { "nome": "Mundial de Clubes", "quantidade": 1, "ultimoAno": 1981 },
+      { "nome": "Copa Libertadores", "quantidade": 3, "ultimoAno": 2022 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 8, "ultimoAno": 2020 },
+      { "nome": "Copa do Brasil", "quantidade": 4, "ultimoAno": 2022 },
+      { "nome": "Campeonato Carioca", "quantidade": 38, "ultimoAno": 2024 }
+    ]
+  },
+  "Palmeiras": {
+    "historicoTitulos": [
+      { "nome": "Copa Libertadores", "quantidade": 3, "ultimoAno": 2021 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 12, "ultimoAno": 2023 },
+      { "nome": "Copa do Brasil", "quantidade": 4, "ultimoAno": 2020 },
+      { "nome": "Campeonato Paulista", "quantidade": 26, "ultimoAno": 2024 }
+    ]
+  },
+  "São Paulo FC": {
+    "historicoTitulos": [
+      { "nome": "Mundial de Clubes", "quantidade": 3, "ultimoAno": 2005 },
+      { "nome": "Copa Libertadores", "quantidade": 3, "ultimoAno": 2005 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 6, "ultimoAno": 2008 },
+      { "nome": "Copa do Brasil", "quantidade": 1, "ultimoAno": 2023 },
+      { "nome": "Campeonato Paulista", "quantidade": 22, "ultimoAno": 2021 }
+    ]
+  },
+  "Grêmio FBPA": {
+    "historicoTitulos": [
+      { "nome": "Mundial de Clubes", "quantidade": 1, "ultimoAno": 1983 },
+      { "nome": "Copa Libertadores", "quantidade": 3, "ultimoAno": 2017 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 2, "ultimoAno": 1996 },
+      { "nome": "Copa do Brasil", "quantidade": 5, "ultimoAno": 2016 },
+      { "nome": "Campeonato Gaúcho", "quantidade": 43, "ultimoAno": 2024 }
+    ]
+  },
+  "Internacional": {
+    "historicoTitulos": [
+      { "nome": "Mundial de Clubes", "quantidade": 1, "ultimoAno": 2006 },
+      { "nome": "Copa Libertadores", "quantidade": 2, "ultimoAno": 2010 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 3, "ultimoAno": 1979 },
+      { "nome": "Copa do Brasil", "quantidade": 1, "ultimoAno": 1992 },
+      { "nome": "Campeonato Gaúcho", "quantidade": 45, "ultimoAno": 2023 }
+    ]
+  },
+  "Atlético Mineiro": {
+    "historicoTitulos": [
+      { "nome": "Copa Libertadores", "quantidade": 1, "ultimoAno": 2013 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 2, "ultimoAno": 2021 },
+      { "nome": "Copa do Brasil", "quantidade": 2, "ultimoAno": 2021 },
+      { "nome": "Campeonato Mineiro", "quantidade": 49, "ultimoAno": 2024 }
+    ]
+  },
+  "Cruzeiro": {
+    "historicoTitulos": [
+      { "nome": "Copa Libertadores", "quantidade": 2, "ultimoAno": 1997 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 4, "ultimoAno": 2014 },
+      { "nome": "Copa do Brasil", "quantidade": 6, "ultimoAno": 2018 },
+      { "nome": "Campeonato Mineiro", "quantidade": 38, "ultimoAno": 2022 }
+    ]
+  },
+  "Fluminense": {
+    "historicoTitulos": [
+      { "nome": "Copa Libertadores", "quantidade": 1, "ultimoAno": 2023 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 4, "ultimoAno": 2012 },
+      { "nome": "Copa do Brasil", "quantidade": 1, "ultimoAno": 2007 },
+      { "nome": "Campeonato Carioca", "quantidade": 33, "ultimoAno": 2023 }
+    ]
+  },
+  "Botafogo": {
+    "historicoTitulos": [
+      { "nome": "Campeonato Brasileiro", "quantidade": 2, "ultimoAno": 1995 },
+      { "nome": "Campeonato Carioca", "quantidade": 21, "ultimoAno": 2018 }
+    ]
+  },
+  "Vasco da Gama": {
+    "historicoTitulos": [
+      { "nome": "Copa Libertadores", "quantidade": 1, "ultimoAno": 1998 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 4, "ultimoAno": 2000 },
+      { "nome": "Copa do Brasil", "quantidade": 1, "ultimoAno": 2011 },
+      { "nome": "Campeonato Carioca", "quantidade": 24, "ultimoAno": 2016 }
+    ]
+  },
+  "Athletico Paranaense": {
+    "historicoTitulos": [
+      { "nome": "Copa Sul-Americana", "quantidade": 2, "ultimoAno": 2021 },
+      { "nome": "Copa do Brasil", "quantidade": 1, "ultimoAno": 2019 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 1, "ultimoAno": 2001 },
+      { "nome": "Campeonato Paranaense", "quantidade": 28, "ultimoAno": 2024 }
+    ]
+  },
+  "Bahia": {
+    "historicoTitulos": [
+      { "nome": "Campeonato Brasileiro", "quantidade": 2, "ultimoAno": 1988 },
+      { "nome": "Campeonato Baiano", "quantidade": 50, "ultimoAno": 2023 },
+      { "nome": "Copa do Nordeste", "quantidade": 4, "ultimoAno": 2021 }
+    ]
+  },
+  "Red Bull Bragantino": {
+    "historicoTitulos": [
+      { "nome": "Campeonato Brasileiro Série B", "quantidade": 2, "ultimoAno": 2019 },
+      { "nome": "Campeonato Paulista", "quantidade": 1, "ultimoAno": 1990 }
+    ]
+  },
+  "Coritiba": {
+    "historicoTitulos": [
+      { "nome": "Campeonato Brasileiro", "quantidade": 1, "ultimoAno": 1985 },
+      { "nome": "Campeonato Brasileiro Série B", "quantidade": 2, "ultimoAno": 2010 },
+      { "nome": "Campeonato Paranaense", "quantidade": 39, "ultimoAno": 2022 }
+    ]
+  },
+  "Santos FC": {
+    "historicoTitulos": [
+      { "nome": "Mundial Interclubes", "quantidade": 2, "ultimoAno": 1963 },
+      { "nome": "Copa Libertadores", "quantidade": 3, "ultimoAno": 2011 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 8, "ultimoAno": 2004 },
+      { "nome": "Copa do Brasil", "quantidade": 1, "ultimoAno": 2010 },
+      { "nome": "Campeonato Paulista", "quantidade": 22, "ultimoAno": 2016 }
+    ]
+  },
+  "Chapecoense": {
+    "historicoTitulos": [
+      { "nome": "Copa Sul-Americana", "quantidade": 1, "ultimoAno": 2016 },
+      { "nome": "Campeonato Brasileiro Série B", "quantidade": 1, "ultimoAno": 2020 },
+      { "nome": "Campeonato Catarinense", "quantidade": 7, "ultimoAno": 2020 }
+    ]
+  },
+  "Mirassol FC": {
+    "historicoTitulos": [
+      { "nome": "Campeonato Brasileiro Série C", "quantidade": 1, "ultimoAno": 2022 },
+      { "nome": "Campeonato Brasileiro Série D", "quantidade": 1, "ultimoAno": 2020 }
+    ]
+  },
+  "Clube do Remo": {
+    "historicoTitulos": [
+      { "nome": "Campeonato Brasileiro Série C", "quantidade": 1, "ultimoAno": 2005 },
+      { "nome": "Copa Verde", "quantidade": 1, "ultimoAno": 2021 },
+      { "nome": "Campeonato Paraense", "quantidade": 47, "ultimoAno": 2022 }
+    ]
+  },
+  "Vitória": {
+    "historicoTitulos": [
+      { "nome": "Campeonato Brasileiro Série B", "quantidade": 1, "ultimoAno": 2023 },
+      { "nome": "Copa do Nordeste", "quantidade": 4, "ultimoAno": 2010 },
+      { "nome": "Campeonato Baiano", "quantidade": 30, "ultimoAno": 2024 }
+    ]
+  }
+}

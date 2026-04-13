@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portal Brasileirão - Informações sobre times da Série A do Campeonato Brasileiro e Premier League">
+    <meta name="author" content="Marcelo">
+    <title>Portal de dados do Futebol</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="Imagens/favicon.ico">
+</head>
+<body>
+    <header class="cabecalho">
+        <div class="container-cabecalho">
+            <div class="logo-secao">
+                <img src="Imagens/logo.jpg" alt="Logo Portal Brasileirão" class="logo">
+                <h1 class="titulo-principal">Portal Futmath</h1>
+            </div>
+            <nav class="navegacao-principal">
+                <ul class="menu-navegacao">
+                    <li><a href="index.html" class="link-ativo">Início</a></li>
+                    <li><a href="paginas/sobre.html">Sobre</a></li>
+                    <li><a href="paginas/contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="conteudo-principal">
+        <section class="secao-apresentacao">
+            <div class="container">
+                <h2 class="titulo-secao">Bem-vindo ao Portal Brasileirão</h2>
+                <p class="descricao-principal">Explore informações detalhadas sobre os times da Série A do Campeonato Brasileiro e da Premier League. Confira elencos, históricos de partidas, conquistas e muito mais!</p>
+            </div>
+        </section>
+
+        <section class="secao-filtro">
+            <div class="container">
+                <h3 class="titulo-filtro">Selecione uma Liga</h3>
+                <div class="botoes-filtro">
+                    <button class="botao-filtro ativo" data-serie="A" id="botao-serie-a">
+                        <span class="texto-botao">Série A</span>
+                    </button>
+                    <button class="botao-filtro" data-serie="B" id="botao-serie-b">
+                        <span class="texto-botao">Premier League</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-times">
+            <div class="container">
+                <h3 class="titulo-secao-times">Times da Série <span id="serie-selecionada">A</span></h3>
+                <div class="grade-times" id="grade-times">
+                    <div class="mensagem-carregamento">
+                        <p>Carregando times...</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao-informacoes">
+            <div class="container">
+                <h3 class="titulo-secao">Como Funciona</h3>
+                <div class="grade-informacoes">
+                    <article class="cartao-informacao">
+                        <div class="icone-informacao">📊</div>
+                        <h4 class="titulo-cartao">Dados em Tempo Real</h4>
+                        <p class="descricao-cartao">Informações atualizadas constantemente através da API football-data.org</p>
+                    </article>
+                    <article class="cartao-informacao">
+                        <div class="icone-informacao">👥</div>
+                        <h4 class="titulo-cartao">Elencos Completos</h4>
+                        <p class="descricao-cartao">Confira todos os jogadores, posições e informações detalhadas de cada atleta</p>
+                    </article>
+                    <article class="cartao-informacao">
+                        <div class="icone-informacao">🏆</div>
+                        <h4 class="titulo-cartao">Histórico de Conquistas</h4>
+                        <p class="descricao-cartao">Explore títulos, troféus e o histórico completo de cada clube</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="rodape">
+        <div class="container-rodape">
+            <div class="secao-rodape">
+                <h5 class="titulo-rodape">Sobre o Projeto</h5>
+                <p class="texto-rodape">Portal Futmath é um projeto desenvolvido para a disciplina de Desenvolvimento Web do Professor Fabio, criado por Marcelo.</p>
+            </div>
+            <div class="secao-rodape">
+                <h5 class="titulo-rodape">Tecnologias</h5>
+                <ul class="lista-rodape">
+                    <li><span>HTML5</span></li>
+                    <li><span>CSS3</span></li>
+                    <li><span>JavaScript</span></li>
+                    <li><span>API football-data.org</span></li>
+                </ul>
+            </div>
+            <div class="secao-rodape">
+                <h5 class="titulo-rodape">Links Úteis</h5>
+                <ul class="lista-rodape">
+                    <li><a href="paginas/sobre.html">Sobre</a></li>
+                    <li><a href="paginas/contato.html">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rodape-inferior">
+            <p class="texto-copyright">&copy; 2026 Portal Brasileirão. Desenvolvido por Marcelo. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
