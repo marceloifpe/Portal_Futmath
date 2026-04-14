@@ -17,7 +17,7 @@
       { "nome": "Campeonato Carioca", "quantidade": 38, "ultimoAno": 2024 }
     ]
   },
-  "Palmeiras": {
+  "SE Palmeiras": {
     "historicoTitulos": [
       { "nome": "Copa Libertadores", "quantidade": 3, "ultimoAno": 2021 },
       { "nome": "Campeonato Brasileiro", "quantidade": 12, "ultimoAno": 2023 },
@@ -43,7 +43,7 @@
       { "nome": "Campeonato Gaúcho", "quantidade": 43, "ultimoAno": 2024 }
     ]
   },
-  "Internacional": {
+  "SC Internacional": {
     "historicoTitulos": [
       { "nome": "Mundial de Clubes", "quantidade": 1, "ultimoAno": 2006 },
       { "nome": "Copa Libertadores", "quantidade": 2, "ultimoAno": 2010 },
@@ -52,7 +52,7 @@
       { "nome": "Campeonato Gaúcho", "quantidade": 45, "ultimoAno": 2023 }
     ]
   },
-  "Atlético Mineiro": {
+  "CA Mineiro": {
     "historicoTitulos": [
       { "nome": "Copa Libertadores", "quantidade": 1, "ultimoAno": 2013 },
       { "nome": "Campeonato Brasileiro", "quantidade": 2, "ultimoAno": 2021 },
@@ -60,7 +60,7 @@
       { "nome": "Campeonato Mineiro", "quantidade": 49, "ultimoAno": 2024 }
     ]
   },
-  "Cruzeiro": {
+  "Cruzeiro EC": {
     "historicoTitulos": [
       { "nome": "Copa Libertadores", "quantidade": 2, "ultimoAno": 1997 },
       { "nome": "Campeonato Brasileiro", "quantidade": 4, "ultimoAno": 2014 },
@@ -68,7 +68,7 @@
       { "nome": "Campeonato Mineiro", "quantidade": 38, "ultimoAno": 2022 }
     ]
   },
-  "Fluminense": {
+  "Fluminense FC": {
     "historicoTitulos": [
       { "nome": "Copa Libertadores", "quantidade": 1, "ultimoAno": 2023 },
       { "nome": "Campeonato Brasileiro", "quantidade": 4, "ultimoAno": 2012 },
@@ -76,13 +76,13 @@
       { "nome": "Campeonato Carioca", "quantidade": 33, "ultimoAno": 2023 }
     ]
   },
-  "Botafogo": {
+  "Botafogo FR": {
     "historicoTitulos": [
-      { "nome": "Campeonato Brasileiro", "quantidade": 2, "ultimoAno": 1995 },
+      { "nome": "Campeonato Brasileiro", "quantidade": 3, "ultimoAno": 2024 },
       { "nome": "Campeonato Carioca", "quantidade": 21, "ultimoAno": 2018 }
     ]
   },
-  "Vasco da Gama": {
+  "CR Vasco da Gama": {
     "historicoTitulos": [
       { "nome": "Copa Libertadores", "quantidade": 1, "ultimoAno": 1998 },
       { "nome": "Campeonato Brasileiro", "quantidade": 4, "ultimoAno": 2000 },
@@ -90,7 +90,7 @@
       { "nome": "Campeonato Carioca", "quantidade": 24, "ultimoAno": 2016 }
     ]
   },
-  "Athletico Paranaense": {
+  "CA Paranaense": {
     "historicoTitulos": [
       { "nome": "Copa Sul-Americana", "quantidade": 2, "ultimoAno": 2021 },
       { "nome": "Copa do Brasil", "quantidade": 1, "ultimoAno": 2019 },
@@ -98,20 +98,20 @@
       { "nome": "Campeonato Paranaense", "quantidade": 28, "ultimoAno": 2024 }
     ]
   },
-  "Bahia": {
+  "EC Bahia": {
     "historicoTitulos": [
       { "nome": "Campeonato Brasileiro", "quantidade": 2, "ultimoAno": 1988 },
       { "nome": "Campeonato Baiano", "quantidade": 50, "ultimoAno": 2023 },
       { "nome": "Copa do Nordeste", "quantidade": 4, "ultimoAno": 2021 }
     ]
   },
-  "Red Bull Bragantino": {
+  "RB Bragantino": {
     "historicoTitulos": [
       { "nome": "Campeonato Brasileiro Série B", "quantidade": 2, "ultimoAno": 2019 },
       { "nome": "Campeonato Paulista", "quantidade": 1, "ultimoAno": 1990 }
     ]
   },
-  "Coritiba": {
+  "Coritiba FBC": {
     "historicoTitulos": [
       { "nome": "Campeonato Brasileiro", "quantidade": 1, "ultimoAno": 1985 },
       { "nome": "Campeonato Brasileiro Série B", "quantidade": 2, "ultimoAno": 2010 },
@@ -127,7 +127,7 @@
       { "nome": "Campeonato Paulista", "quantidade": 22, "ultimoAno": 2016 }
     ]
   },
-  "Chapecoense": {
+  "Chapecoense AF": {
     "historicoTitulos": [
       { "nome": "Copa Sul-Americana", "quantidade": 1, "ultimoAno": 2016 },
       { "nome": "Campeonato Brasileiro Série B", "quantidade": 1, "ultimoAno": 2020 },
@@ -147,7 +147,7 @@
       { "nome": "Campeonato Paraense", "quantidade": 47, "ultimoAno": 2022 }
     ]
   },
-  "Vitória": {
+  "EC Vitória": {
     "historicoTitulos": [
       { "nome": "Campeonato Brasileiro Série B", "quantidade": 1, "ultimoAno": 2023 },
       { "nome": "Copa do Nordeste", "quantidade": 4, "ultimoAno": 2010 },

@@ -230,7 +230,7 @@ a:hover {
 }
 
 .titulo-secao {
-    color: var(--cor-texto-claro);
+    color: var(--cor-texto);
     font-size: var(--tamanho-subtitulo);
 }
 
