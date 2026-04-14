@@ -1,19 +1,21 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Contato - Portal Brasileirão">
+    <meta name="description" content="Contato - Portal Futmath">
     <title>Contato - Portal Futmath</title>
     <link rel="stylesheet" href="../style.css">
 </head>
+
 <body>
     <!-- Cabeçalho Principal -->
     <header class="cabecalho">
         <div class="container-cabecalho">
             <div class="logo-secao">
                 <a href="../index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                    <img src="../Imagens/logo.png" alt="Logo Portal Brasileirão" class="logo">
+                    <img src="../Imagens/logo.png" alt="Logo Portal Futmath" class="logo">
                     <h1 class="titulo-principal">Portal Futmath</h1>
                 </a>
             </div>
@@ -34,34 +36,7 @@
                 <h2 class="titulo-pagina">Entre em Contato</h2>
 
                 <div class="grid-contato">
-                    <!-- Formulário de Contato -->
-                    <article class="artigo-contato">
-                        <h3 class="titulo-secao">Envie uma Mensagem</h3>
-                        <form class="formulario-contato" id="formulario-contato">
-                            <div class="grupo-formulario">
-                                <label for="nome-contato" class="label-formulario">Nome <span class="obrigatorio">*</span></label>
-                                <input type="text" id="nome-contato" name="nome" class="input-formulario" placeholder="Seu nome completo" required>
-                            </div>
 
-                            <div class="grupo-formulario">
-                                <label for="email-contato" class="label-formulario">Email <span class="obrigatorio">*</span></label>
-                                <input type="email" id="email-contato" name="email" class="input-formulario" placeholder="seu.email@exemplo.com" required>
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="assunto-contato" class="label-formulario">Assunto <span class="obrigatorio">*</span></label>
-                                <input type="text" id="assunto-contato" name="assunto" class="input-formulario" placeholder="Assunto da mensagem" required>
-                            </div>
-
-                            <div class="grupo-formulario">
-                                <label for="mensagem-contato" class="label-formulario">Mensagem <span class="obrigatorio">*</span></label>
-                                <textarea id="mensagem-contato" name="mensagem" class="textarea-formulario" placeholder="Sua mensagem aqui..." rows="6" required></textarea>
-                            </div>
-
-                            <button type="submit" class="botao-enviar">Enviar Mensagem</button>
-                            <p class="texto-info-formulario">Nota: Este é um formulário de demonstração. As mensagens não serão realmente enviadas.</p>
-                        </form>
-                    </article>
 
                     <!-- Informações de Contato -->
                     <article class="artigo-contato">
@@ -91,7 +66,9 @@
 
                         <div class="secao-info-contato">
                             <h4 class="titulo-info-contato">Sobre Este Projeto</h4>
-                            <p class="texto-info-contato">O Portal Brasileirão foi desenvolvido como projeto da disciplina de Desenvolvimento Web. O objetivo é criar uma plataforma estilo Transfermarkt focada nos times das Séries A e B do Campeonato Brasileiro.</p>
+                            <p class="texto-info-contato">O Portal Futmath foi desenvolvido como projeto da disciplina
+                                de Desenvolvimento Web. O objetivo é criar uma plataforma estilo Transfermarkt focada
+                                nos times das Séries A e B do Campeonato Brasileiro.</p>
                         </div>
 
                         <div class="secao-info-contato">
@@ -109,7 +86,9 @@
                 <!-- Seção de Agradecimento -->
                 <section class="secao-agradecimento">
                     <h3 class="titulo-secao">Obrigado!</h3>
-                    <p class="texto-agradecimento">Obrigado por visitar o Portal Brasileirão! Se você tem sugestões, dúvidas ou encontrou algum problema, não hesite em entrar em contato conosco. Sua opinião é muito importante para melhorarmos o projeto.</p>
+                    <p class="texto-agradecimento">Obrigado por visitar o Portal Futmath! Se você tem sugestões,
+                        dúvidas ou encontrou algum problema, não hesite em entrar em contato conosco. Sua opinião é
+                        muito importante para melhorarmos o projeto.</p>
                 </section>
             </div>
         </section>
@@ -120,7 +99,8 @@
         <div class="container-rodape">
             <div class="secao-rodape">
                 <h5 class="titulo-rodape">Sobre o Projeto</h5>
-                <p class="texto-rodape">Portal Brasileirão é um projeto desenvolvido para a disciplina de Desenvolvimento Web do Professor Fabio, criado por Marcelo.</p>
+                <p class="texto-rodape">Portal Futmath é um projeto desenvolvido para a disciplina de
+                    Desenvolvimento Web do Professor Fabio, criado por Marcelo.</p>
             </div>
             <div class="secao-rodape">
                 <h5 class="titulo-rodape">Tecnologias</h5>
@@ -140,7 +120,8 @@
             </div>
         </div>
         <div class="rodape-inferior">
-            <p class="texto-copyright">&copy; 2026 Portal Brasileirão. Desenvolvido por Marcelo. Todos os direitos reservados.</p>
+            <p class="texto-copyright">&copy; 2026 Portal Futmath. Desenvolvido por Marcelo. Todos os direitos
+                reservados.</p>
         </div>
     </footer>
 
@@ -151,7 +132,7 @@
         const formularioContato = document.getElementById('formulario-contato');
 
         if (formularioContato) {
-            formularioContato.addEventListener('submit', function(evento) {
+            formularioContato.addEventListener('submit', function (evento) {
                 evento.preventDefault();
 
                 // Obter valores do formulário
@@ -169,4 +150,5 @@
         }
     </script>
 </body>
+
 </html>

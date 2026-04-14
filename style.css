@@ -1309,10 +1309,8 @@ a:hover {
 }
 
 .grid-contato {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: var(--espacamento-xl);
-    margin-bottom: var(--espacamento-xl);
+    display: flex;
+    justify-content: center;
 }
 
 .artigo-contato {
@@ -1320,6 +1318,11 @@ a:hover {
     padding: var(--espacamento-xl);
     border-radius: 8px;
     box-shadow: var(--sombra-leve);
+    
+    max-width: 600px;
+    width: 100%;
+    
+    margin: 0 auto;
 }
 
 .formulario-contato {
