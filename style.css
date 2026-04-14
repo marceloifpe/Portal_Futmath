@@ -1,13 +1,3 @@
-/* ============================================
-   PORTAL BRASILEIRÃO - ESTILOS GLOBAIS
-   Desenvolvido por: Marcelo
-   Disciplina: Desenvolvimento Web - Prof. Fabio
-   ============================================ */
-
-/* ============================================
-   VARIÁVEIS CSS
-   ============================================ */
-
 :root {
     /* Cores Principais */
     --cor-primaria: #1a472a;
@@ -62,10 +52,6 @@
     --breakpoint-grande: 1280px;
 }
 
-/* ============================================
-   RESET E ESTILOS GLOBAIS
-   ============================================ */
-
 * {
     margin: 0;
     padding: 0;
@@ -85,10 +71,6 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
-/* ============================================
-   TIPOGRAFIA
-   ============================================ */
 
 h1, h2, h3, h4, h5, h6 {
     font-family: var(--fonte-titulo);
@@ -137,10 +119,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ============================================
-   CONTAINER
-   ============================================ */
-
 .container {
     width: 100%;
     max-width: 1200px;
@@ -168,10 +146,6 @@ a:hover {
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: var(--espacamento-lg);
 }
-
-/* ============================================
-   CABEÇALHO
-   ============================================ */
 
 .cabecalho {
     background-color: var(--cor-primaria);
@@ -203,10 +177,6 @@ a:hover {
     margin: 0;
 }
 
-/* ============================================
-   NAVEGAÇÃO
-   ============================================ */
-
 .navegacao-principal {
     flex: 1;
     display: flex;
@@ -233,18 +203,10 @@ a:hover {
     color: var(--cor-primaria);
 }
 
-/* ============================================
-   CONTEÚDO PRINCIPAL
-   ============================================ */
-
 .conteudo-principal {
     min-height: calc(100vh - 200px);
     padding: var(--espacamento-xl) 0;
 }
-
-/* ============================================
-   SEÇÃO DE APRESENTAÇÃO
-   ============================================ */
 
 .secao-apresentacao {
     background: linear-gradient(135deg, var(--cor-primaria) 0%, var(--cor-hover) 100%);
@@ -252,6 +214,19 @@ a:hover {
     padding: var(--espacamento-xxl) 0;
     text-align: center;
     margin-bottom: var(--espacamento-xl);
+    transition: background 0.5s ease-in-out;
+}
+
+.secao-apresentacao.bg-serie-a {
+    background: linear-gradient(rgba(26, 71, 42, 0.85), rgba(22, 160, 133, 0.85)), url('Imagens/Fundo_SerieA.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.secao-apresentacao.bg-premier-league {
+    background: linear-gradient(rgba(44, 62, 80, 0.85), rgba(52, 73, 94, 0.85)), url('Imagens/Fundo_Premier_league.png');
+    background-size: cover;
+    background-position: center;
 }
 
 .titulo-secao {
@@ -265,10 +240,6 @@ a:hover {
     margin: var(--espacamento-lg) auto;
     color: var(--cor-texto-claro);
 }
-
-/* ============================================
-   SEÇÃO DE FILTRO
-   ============================================ */
 
 .secao-filtro {
     background-color: white;
@@ -317,10 +288,6 @@ a:hover {
 .texto-botao {
     display: block;
 }
-
-/* ============================================
-   SEÇÃO DE TIMES
-   ============================================ */
 
 .secao-times {
     padding: var(--espacamento-xl) 0;

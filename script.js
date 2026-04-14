@@ -173,6 +173,24 @@ async function carregarTimes(serie) {
     }
 }
 
+// ============================================
+// FUNÇÃO PARA TROCAR O BACKGROUND (ADICIONADA)
+// ============================================
+function alternarBackground(serie) {
+    const secaoHero = document.querySelector('.secao-apresentacao');
+    
+    // Previne erros caso a seção não exista na página
+    if (!secaoHero) return;
+
+    if (serie === 'A') {
+        secaoHero.classList.add('bg-serie-a');
+        secaoHero.classList.remove('bg-premier-league');
+    } else {
+        secaoHero.classList.add('bg-premier-league');
+        secaoHero.classList.remove('bg-serie-a');
+    }
+}
+
 function inicializarFiltros() {
     const botaoSerieA = document.getElementById('botao-serie-a');
     const botaoSerieB = document.getElementById('botao-serie-b');
@@ -181,6 +199,7 @@ function inicializarFiltros() {
         botaoSerieA.addEventListener('click', () => {
             botaoSerieA.classList.add('ativo');
             botaoSerieB.classList.remove('ativo');
+            alternarBackground('A'); // <--- ADICIONADO AQUI
             carregarTimes('A');
         });
     }
@@ -189,6 +208,7 @@ function inicializarFiltros() {
         botaoSerieB.addEventListener('click', () => {
             botaoSerieB.classList.add('ativo');
             botaoSerieA.classList.remove('ativo');
+            alternarBackground('B'); // <--- ADICIONADO AQUI
             carregarTimes('B');
         });
     }
@@ -200,6 +220,7 @@ function inicializarPagina() {
         console.warn('⚠️ Chave da API não configurada! Substitua a chave padrão pela sua chave do football-data.org');
     }
     inicializarFiltros();
+    alternarBackground('A'); // <--- ADICIONADO AQUI (Garante o fundo da Série A ao carregar o site)
     carregarTimes('A');
 }
 
