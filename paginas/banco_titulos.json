@@ -153,5 +153,129 @@
       { "nome": "Copa do Nordeste", "quantidade": 4, "ultimoAno": 2010 },
       { "nome": "Campeonato Baiano", "quantidade": 30, "ultimoAno": 2024 }
     ]
+  },
+
+  "Arsenal FC": {
+    "historicoTitulos": [
+      { "nome": "Premier League", "quantidade": 13, "ultimoAno": 2004 },
+      { "nome": "FA Cup", "quantidade": 14, "ultimoAno": 2020 },
+      { "nome": "EFL Cup", "quantidade": 2, "ultimoAno": 1993 }
+    ]
+  },
+  "Manchester City FC": {
+    "historicoTitulos": [
+      { "nome": "Premier League", "quantidade": 9, "ultimoAno": 2024 },
+      { "nome": "UEFA Champions League", "quantidade": 1, "ultimoAno": 2023 },
+      { "nome": "FA Cup", "quantidade": 7, "ultimoAno": 2023 },
+      { "nome": "EFL Cup", "quantidade": 8, "ultimoAno": 2021 }
+    ]
+  },
+  "Manchester United FC": {
+    "historicoTitulos": [
+      { "nome": "Premier League", "quantidade": 13, "ultimoAno": 2013 },
+      { "nome": "English First Division", "quantidade": 7, "ultimoAno": 1967 },
+      { "nome": "UEFA Champions League", "quantidade": 3, "ultimoAno": 2008 },
+      { "nome": "FA Cup", "quantidade": 12, "ultimoAno": 2016 }
+    ]
+  },
+  "Aston Villa FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 7, "ultimoAno": 1981 },
+      { "nome": "UEFA Champions League", "quantidade": 1, "ultimoAno": 1982 },
+      { "nome": "FA Cup", "quantidade": 7, "ultimoAno": 1957 }
+    ]
+  },
+  "Liverpool FC": {
+    "historicoTitulos": [
+      { "nome": "Premier League", "quantidade": 1, "ultimoAno": 2020 },
+      { "nome": "English First Division", "quantidade": 18, "ultimoAno": 1990 },
+      { "nome": "UEFA Champions League", "quantidade": 6, "ultimoAno": 2019 },
+      { "nome": "FA Cup", "quantidade": 8, "ultimoAno": 2022 }
+    ]
+  },
+  "Chelsea FC": {
+    "historicoTitulos": [
+      { "nome": "Premier League", "quantidade": 5, "ultimoAno": 2017 },
+      { "nome": "UEFA Champions League", "quantidade": 2, "ultimoAno": 2021 },
+      { "nome": "FA Cup", "quantidade": 8, "ultimoAno": 2018 },
+      { "nome": "EFL Cup", "quantidade": 5, "ultimoAno": 2015 }
+    ]
+  },
+  "Brentford FC": {
+    "historicoTitulos": [
+      { "nome": "EFL Championship", "quantidade": 1, "ultimoAno": 2021 }
+    ]
+  },
+  "Everton FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 9, "ultimoAno": 1987 },
+      { "nome": "FA Cup", "quantidade": 5, "ultimoAno": 1995 }
+    ]
+  },
+  "Brighton & Hove Albion FC": {
+    "historicoTitulos": [
+      { "nome": "EFL Championship", "quantidade": 1, "ultimoAno": 2017 }
+    ]
+  },
+  "Sunderland AFC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 6, "ultimoAno": 1936 },
+      { "nome": "FA Cup", "quantidade": 2, "ultimoAno": 1973 }
+    ]
+  },
+  "AFC Bournemouth": {
+    "historicoTitulos": [
+      { "nome": "EFL Championship", "quantidade": 1, "ultimoAno": 2015 }
+    ]
+  },
+  "Fulham FC": {
+    "historicoTitulos": [
+      { "nome": "EFL Championship", "quantidade": 2, "ultimoAno": 2022 }
+    ]
+  },
+  "Crystal Palace FC": {
+    "historicoTitulos": []
+  },
+  "Newcastle United FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 4, "ultimoAno": 1927 },
+      { "nome": "FA Cup", "quantidade": 6, "ultimoAno": 1955 }
+    ]
+  },
+  "Leeds United FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 3, "ultimoAno": 1992 },
+      { "nome": "FA Cup", "quantidade": 1, "ultimoAno": 1972 }
+    ]
+  },
+  "Nottingham Forest FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 1, "ultimoAno": 1978 },
+      { "nome": "UEFA Champions League", "quantidade": 2, "ultimoAno": 1980 }
+    ]
+  },
+  "West Ham United FC": {
+    "historicoTitulos": [
+      { "nome": "UEFA Conference League", "quantidade": 1, "ultimoAno": 2023 },
+      { "nome": "FA Cup", "quantidade": 3, "ultimoAno": 1980 }
+    ]
+  },
+  "Tottenham Hotspur FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 2, "ultimoAno": 1961 },
+      { "nome": "FA Cup", "quantidade": 8, "ultimoAno": 1991 },
+      { "nome": "EFL Cup", "quantidade": 4, "ultimoAno": 2008 }
+    ]
+  },
+  "Burnley FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 2, "ultimoAno": 1960 }
+    ]
+  },
+  "Wolverhampton Wanderers FC": {
+    "historicoTitulos": [
+      { "nome": "English First Division", "quantidade": 3, "ultimoAno": 1959 },
+      { "nome": "FA Cup", "quantidade": 4, "ultimoAno": 1960 }
+    ]
   }
 }
