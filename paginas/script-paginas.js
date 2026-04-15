@@ -1,13 +1,3 @@
-/* ============================================
-   SCRIPT ESPECÍFICO PARA PÁGINAS INTERNAS
-   Desenvolvido por: Marcelo
-   Disciplina: Desenvolvimento Web - Prof. Fabio
-   ============================================ */
-
-// ============================================
-// PÁGINA: time.html
-// ============================================
-
 async function inicializarPaginaTime() {
     const timeAtual = PortalBrasileirao.obterTimeAtual();
 
@@ -86,10 +76,6 @@ async function carregarUltimasPartidas(idTime) {
     }
 }
 
-// ============================================
-// PÁGINA: elenco.html
-// ============================================
-
 let elencoCompleto = [];
 let posicaoFiltrada = 'todos';
 
@@ -157,7 +143,6 @@ function preencherTabelaJogadores(jogadores) {
         const posicao = traduzirPosicao(jogador.position);
         const dataNascimento = PortalBrasileirao.formatarData(jogador.dateOfBirth);
 
-        // IMPLEMENTAÇÃO DE ACESSIBILIDADE: Envolve a nacionalidade na tag lang="en"
         const nacionalidade = jogador.nationality
             ? `<span lang="en">${jogador.nationality}</span>`
             : '-';
@@ -211,10 +196,6 @@ function filtrarJogadores() {
         mensagem.classList.add('oculto');
     }
 }
-
-// ============================================
-// PÁGINA: jogador.html
-// ============================================
 
 async function inicializarPaginaJogador() {
     const urlParams = new URLSearchParams(window.location.search);
@@ -319,10 +300,6 @@ function calcularIdade(dataNascimento) {
     return idade;
 }
 
-// ============================================
-// PÁGINA: historico.html (Clube Atual e Competições)
-// ============================================
-
 async function inicializarPaginaHistorico() {
     const urlParams = new URLSearchParams(window.location.search);
     const idJogador = urlParams.get('id');
@@ -393,10 +370,6 @@ async function inicializarPaginaHistorico() {
         if (timeline) timeline.innerHTML = '<p style="color: red; text-align: center; padding: 20px; background: white; border-radius: 8px;">Erro ao carregar os dados.</p>';
     }
 }
-
-// ============================================
-// PÁGINA: partidas.html
-// ============================================
 
 let partidasGlobais = [];
 let tipoPartidaAtual = 'proximas';
@@ -518,10 +491,6 @@ function exibirPartidas(partidas, tipo) {
 
     listaElement.innerHTML = html;
 }
-
-// ============================================
-// PÁGINA: estatisticas.html
-// ============================================
 
 let artilheirosGlobais = [];
 
@@ -687,10 +656,6 @@ function exibirEstatisticasGerais(timeStanding) {
     document.getElementById('stat-diferenca-gols').textContent = timeStanding.goalDifference || '0';
 }
 
-// ============================================
-// PÁGINA: conquistas.html
-// ============================================
-
 async function inicializarPaginaConquistas() {
     const timeAtual = PortalBrasileirao.obterTimeAtual();
 
@@ -772,10 +737,6 @@ async function inicializarPaginaConquistas() {
         console.error('Erro ao carregar conquistas:', erro);
     }
 }
-
-// ============================================
-// INICIALIZAÇÃO AUTOMÁTICA
-// ============================================
 
 document.addEventListener('DOMContentLoaded', function() {
     const caminhoAtual = window.location.pathname;

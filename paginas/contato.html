@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <!-- Cabeçalho Principal -->
+
     <header class="cabecalho">
         <div class="container-cabecalho">
             <div class="logo-secao">
@@ -29,7 +29,6 @@
         </div>
     </header>
 
-    <!-- Conteúdo Principal -->
     <main class="conteudo-principal">
         <section class="secao-contato">
             <div class="container">
@@ -37,8 +36,6 @@
 
                 <div class="grid-contato">
 
-
-                    <!-- Informações de Contato -->
                     <article class="artigo-contato">
                         <h3 class="titulo-secao">Informações de Contato</h3>
 
@@ -85,7 +82,6 @@
                     </article>
                 </div>
 
-                <!-- Seção de Agradecimento -->
                 <section class="secao-agradecimento">
                     <h3 class="titulo-secao">Obrigado!</h3>
                     <p class="texto-agradecimento">Obrigado por visitar o Portal Futmath! Se você tem sugestões,
@@ -96,7 +92,6 @@
         </section>
     </main>
 
-    <!-- Rodapé -->
     <footer class="rodape">
         <div class="container-rodape">
             <div class="secao-rodape">
@@ -127,26 +122,21 @@
         </div>
     </footer>
 
-    <!-- Scripts -->
     <script src="../script.js"></script>
     <script>
-        // Manipulador do formulário de contato
         const formularioContato = document.getElementById('formulario-contato');
 
         if (formularioContato) {
             formularioContato.addEventListener('submit', function (evento) {
                 evento.preventDefault();
 
-                // Obter valores do formulário
                 const nome = document.getElementById('nome-contato').value;
                 const email = document.getElementById('email-contato').value;
                 const assunto = document.getElementById('assunto-contato').value;
                 const mensagem = document.getElementById('mensagem-contato').value;
 
-                // Exibir mensagem de sucesso
                 alert(`Obrigado, ${nome}! Sua mensagem foi recebida.\n\nEm um projeto real, esta mensagem seria enviada para: ${email}`);
 
-                // Limpar formulário
                 formularioContato.reset();
             });
         }

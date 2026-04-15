@@ -34,8 +34,7 @@ Portal_Futmath/
 ├── index.html                    # Página inicial
 ├── style.css                     # Estilos globais
 ├── script.js                     # Lógica principal
-├── API_INFO.md                   # Informações sobre a API
-├── ESTRUTURA_PROJETO.md          # Documentação da estrutura
+├── LICENSE                       # Informações sobre a licença do projeto
 ├── README.md                     # Este arquivo
 ├── paginas/
 │   ├── banco_titulos.json        # Carrega as informações de conquistas de cada time
