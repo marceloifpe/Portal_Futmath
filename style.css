@@ -1,7 +1,6 @@
 :root {
     --cor-primaria: #1a472a;
     --cor-secundaria: #f4d03f;
-    --cor-destaque: #e74c3c;
     --cor-fundo: #f8f9fa;
     --cor-texto: #2c3e50;
     --cor-texto-claro: #ecf0f1;
@@ -705,10 +704,6 @@ a:hover {
     border-radius: 8px;
     margin-bottom: var(--espacamento-xl);
     box-shadow: var(--sombra-leve);
-}
-
-.titulo-filtro {
-    margin-bottom: var(--espacamento-md);
 }
 
 .botoes-filtro-posicao {
