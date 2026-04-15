@@ -678,17 +678,6 @@ a:hover {
     text-align: center;
 }
 
-.secao-contato-rapido {
-    background-color: var(--cor-fundo);
-    padding: var(--espacamento-lg);
-    border-radius: 8px;
-}
-
-.info-contato p {
-    margin-bottom: var(--espacamento-sm);
-}
-
-/* Página de Elenco */
 .secao-elenco {
     padding: var(--espacamento-xl) 0;
 }
@@ -1211,19 +1200,6 @@ a:hover {
     height: 24px;
     object-fit: contain;
     vertical-align: middle;
-}
-
-.lista-tecnologias-contato {
-    list-style: none;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--espacamento-sm);
-}
-
-.lista-tecnologias-contato li {
-    padding: var(--espacamento-sm);
-    background-color: var(--cor-fundo);
-    border-radius: 4px;
 }
 
 .secao-agradecimento {
