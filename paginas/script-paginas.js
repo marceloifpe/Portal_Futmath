@@ -245,8 +245,62 @@ async function inicializarPaginaJogador() {
             document.getElementById('idade-jogador').textContent = `${idade} anos`;
         }
 
+        // ==========================================
+        // CORREÇÃO: TRATAMENTO DO HISTÓRICO / CLUBE
+        // ==========================================
+        const containerHistorico = document.querySelector('.timeline-historico');
+        
+        if (containerHistorico) {
+            if (jogador.currentTeam) {
+                // Pega as competições que o jogador está disputando
+                let competicoesHtml = '';
+                if (jogador.currentTeam.runningCompetitions && jogador.currentTeam.runningCompetitions.length > 0) {
+                    jogador.currentTeam.runningCompetitions.forEach(comp => {
+                        competicoesHtml += `
+                            <span style="display: inline-block; background: var(--cor-primaria); color: white; padding: 5px 15px; border-radius: 20px; margin: 5px; font-size: 0.9rem;">
+                                🏆 ${comp.name}
+                            </span>`;
+                    });
+                } else {
+                    competicoesHtml = '<p style="color: var(--cor-borda);">Nenhuma competição listada no momento.</p>';
+                }
+
+                // Renderiza na tela substituindo o "Carregando histórico..."
+                containerHistorico.innerHTML = `
+                    <div style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
+                        <img src="${jogador.currentTeam.crest}" alt="Escudo" style="width: 90px; margin-bottom: 15px;" onerror="this.src='../Imagens/placeholder-escudo.png'">
+                        <h3 style="color: var(--cor-primaria); margin-bottom: 10px;">${jogador.currentTeam.name}</h3>
+                        
+                        <div style="display: flex; gap: 20px; justify-content: center; width: 100%; margin-bottom: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 15px 0; text-align: center;">
+                            <div>
+                                <strong style="display: block; color: var(--cor-borda); font-size: 0.85rem;">ESTÁDIO</strong>
+                                <span style="color: var(--cor-texto);">${jogador.currentTeam.venue || '-'}</span>
+                            </div>
+                            <div>
+                                <strong style="display: block; color: var(--cor-borda); font-size: 0.85rem;">FUNDAÇÃO DO CLUBE</strong>
+                                <span style="color: var(--cor-texto);">${jogador.currentTeam.founded || '-'}</span>
+                            </div>
+                        </div>
+
+                        <h4 style="margin-bottom: 10px; color: var(--cor-texto);">Competições em Disputa</h4>
+                        <div style="text-align: center;">
+                            ${competicoesHtml}
+                        </div>
+                        
+                        <div style="margin-top: 20px; padding-top: 10px; text-align: center;">
+                            <p style="color: #f39c12; font-size: 0.85rem;">⚠️ A API gratuita não fornece o histórico de transferências, apenas o clube atual.</p>
+                        </div>
+                    </div>
+                `;
+            } else {
+                containerHistorico.innerHTML = '<p style="text-align: center; padding: 20px;">Este jogador está atualmente sem clube.</p>';
+            }
+        }
+
     } catch (erro) {
         console.error('Erro ao carregar dados do jogador:', erro);
+        const containerHistorico = document.querySelector('.timeline-historico');
+        if (containerHistorico) containerHistorico.innerHTML = '<p style="color: red; text-align: center;">Erro ao carregar os dados.</p>';
     }
 }
 
@@ -260,6 +314,81 @@ function calcularIdade(dataNascimento) {
     }
 
     return idade;
+}
+
+// ============================================
+// PÁGINA: historico.html (Clube Atual e Competições)
+// ============================================
+
+async function inicializarPaginaHistorico() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const idJogador = urlParams.get('id'); 
+
+    if (!idJogador) {
+        window.history.back();
+        return;
+    }
+
+    try {
+        const jogador = await PortalBrasileirao.fazerRequisicaoApi(`/persons/${idJogador}`);
+
+        if (jogador) {
+            const nomeEl = document.getElementById('nome-jogador-historico');
+            if (nomeEl) nomeEl.textContent = jogador.name || 'Jogador';
+
+            const timeline = document.getElementById('timeline-completa');
+            
+            if (jogador.currentTeam) {
+                const elFundacao = document.getElementById('fundacao-clube');
+                if (elFundacao) elFundacao.textContent = jogador.currentTeam.founded || '-';
+
+                const elEstadio = document.getElementById('estadio-clube');
+                if (elEstadio) elEstadio.textContent = jogador.currentTeam.venue || '-';
+
+                const elCores = document.getElementById('cores-clube');
+                if (elCores) elCores.textContent = jogador.currentTeam.clubColors || '-';
+
+                let competicoesHtml = '';
+                if (jogador.currentTeam.runningCompetitions && jogador.currentTeam.runningCompetitions.length > 0) {
+                    jogador.currentTeam.runningCompetitions.forEach(comp => {
+                        competicoesHtml += `
+                            <span style="display: inline-block; background: var(--cor-primaria); color: white; padding: 10px 20px; border-radius: 20px; margin: 5px; font-weight: bold; box-shadow: 0 2px 4px rgba(0,0,0,0.1);">
+                                🏆 ${comp.name}
+                            </span>`;
+                    });
+                } else {
+                    competicoesHtml = '<p style="color: var(--cor-borda);">Nenhuma competição listada no momento.</p>';
+                }
+
+                if (timeline) {
+                    timeline.innerHTML = `
+                        <div style="text-align: center; padding: 30px; background: white; border-radius: 12px; box-shadow: var(--sombra-leve);">
+                            <img src="${jogador.currentTeam.crest}" alt="Escudo do ${jogador.currentTeam.name}" style="width: 120px; margin-bottom: 15px;" onerror="this.src='../Imagens/placeholder-escudo.png'">
+                            <h3 style="color: var(--cor-primaria); font-size: 24px; margin-bottom: 5px;">${jogador.currentTeam.name}</h3>
+                            <p style="color: var(--cor-borda); font-weight: bold; margin-bottom: 30px;">Clube Atual</p>
+                            
+                            <h4 style="margin-bottom: 20px; color: var(--cor-texto); font-size: 18px;">Competições em Disputa na Temporada</h4>
+                            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
+                                ${competicoesHtml}
+                            </div>
+                            
+                            <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--cor-borda);">
+                                <p style="color: #f39c12; font-size: 0.9rem;">⚠️ Nota de Sistema: A API gratuita exibe apenas o contrato atual e as competições ativas.</p>
+                            </div>
+                        </div>
+                    `;
+                }
+            } else {
+                if (timeline) {
+                    timeline.innerHTML = '<p style="text-align: center; padding: 20px; background: white; border-radius: 8px;">Este jogador está atualmente sem clube.</p>';
+                }
+            }
+        }
+    } catch (erro) {
+        console.error('Erro ao carregar histórico:', erro);
+        const timeline = document.getElementById('timeline-completa');
+        if (timeline) timeline.innerHTML = '<p style="color: red; text-align: center; padding: 20px; background: white; border-radius: 8px;">Erro ao carregar os dados.</p>';
+    }
 }
 
 // ============================================
@@ -620,7 +749,6 @@ async function inicializarPaginaConquistas() {
         const msgCarregando = Array.from(document.querySelectorAll('.mensagem-carregamento'))
             .find(el => el.textContent.includes('Carregando conquistas'));
 
-        // Mantido 100% via API conforme solicitado
         if (msgCarregando) {
             if (detalhesTime && detalhesTime.runningCompetitions && detalhesTime.runningCompetitions.length > 0) {
                 let html = `
@@ -661,5 +789,7 @@ document.addEventListener('DOMContentLoaded', function() {
         inicializarPaginaEstatisticas();
     } else if (caminhoAtual.includes('conquistas.html')) {
         inicializarPaginaConquistas();
+    } else if (caminhoAtual.includes('historico.html')) {
+        inicializarPaginaHistorico();
     }
 });

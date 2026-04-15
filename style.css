@@ -1396,7 +1396,10 @@ a:hover {
 }
 
 .icone-rede {
-    font-size: 20px;
+    width: 24px;            /* Define a largura da imagem */
+    height: 24px;           /* Define a altura da imagem */
+    object-fit: contain;    /* Garante que a imagem não fique esticada/distorcida */
+    vertical-align: middle; /* Alinha a imagem perfeitamente com o texto */
 }
 
 .lista-tecnologias-contato {
