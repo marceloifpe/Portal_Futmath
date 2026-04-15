@@ -158,7 +158,11 @@ function preencherTabelaJogadores(jogadores) {
         const nome = jogador.name || '-';
         const posicao = traduzirPosicao(jogador.position);
         const dataNascimento = PortalBrasileirao.formatarData(jogador.dateOfBirth);
-        const nacionalidade = jogador.nationality || '-';
+        
+        // IMPLEMENTAÇÃO DE ACESSIBILIDADE: Envolve a nacionalidade na tag lang="en"
+        const nacionalidade = jogador.nationality 
+            ? `<span lang="en">${jogador.nationality}</span>` 
+            : '-';
 
         html += `
             <tr class="linha-jogador" data-posicao="${jogador.position || ''}">
@@ -234,10 +238,16 @@ async function inicializarPaginaJogador() {
         document.getElementById('nome-jogador').textContent = jogador.name || '-';
         document.getElementById('numero-jogador').textContent = jogador.shirtNumber || '-';
         document.getElementById('posicao-jogador').textContent = traduzirPosicao(jogador.position);
-        document.getElementById('nacionalidade-jogador').textContent = jogador.nationality || '-';
+        
+        // IMPLEMENTAÇÃO DE ACESSIBILIDADE: Usando innerHTML para aplicar a tag span com lang="en"
+        document.getElementById('nacionalidade-jogador').innerHTML = jogador.nationality 
+            ? `<span lang="en">${jogador.nationality}</span>` 
+            : '-';
+        document.getElementById('nacionalidade-completa').innerHTML = jogador.nationality 
+            ? `<span lang="en">${jogador.nationality}</span>` 
+            : '-';
 
         document.getElementById('data-nascimento').textContent = PortalBrasileirao.formatarData(jogador.dateOfBirth);
-        document.getElementById('nacionalidade-completa').textContent = jogador.nationality || '-';
         document.getElementById('numero-camisa').textContent = jogador.shirtNumber || '-';
 
         if (jogador.dateOfBirth) {
@@ -245,14 +255,10 @@ async function inicializarPaginaJogador() {
             document.getElementById('idade-jogador').textContent = `${idade} anos`;
         }
 
-        // ==========================================
-        // CORREÇÃO: TRATAMENTO DO HISTÓRICO / CLUBE
-        // ==========================================
         const containerHistorico = document.querySelector('.timeline-historico');
         
         if (containerHistorico) {
             if (jogador.currentTeam) {
-                // Pega as competições que o jogador está disputando
                 let competicoesHtml = '';
                 if (jogador.currentTeam.runningCompetitions && jogador.currentTeam.runningCompetitions.length > 0) {
                     jogador.currentTeam.runningCompetitions.forEach(comp => {
@@ -265,7 +271,6 @@ async function inicializarPaginaJogador() {
                     competicoesHtml = '<p style="color: var(--cor-borda);">Nenhuma competição listada no momento.</p>';
                 }
 
-                // Renderiza na tela substituindo o "Carregando histórico..."
                 containerHistorico.innerHTML = `
                     <div style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
                         <img src="${jogador.currentTeam.crest}" alt="Escudo" style="width: 90px; margin-bottom: 15px;" onerror="this.src='../Imagens/placeholder-escudo.png'">
