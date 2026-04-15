@@ -36,8 +36,6 @@ async function inicializarPaginaTime() {
             document.getElementById('website-time').innerHTML = detalhesTime.website
                 ? `<a href="${detalhesTime.website}" target="_blank" rel="noopener noreferrer">${detalhesTime.website}</a>`
                 : '-';
-            document.getElementById('email-time').textContent = detalhesTime.email || '-';
-            document.getElementById('telefone-time').textContent = detalhesTime.phone || '-';
         }
 
         await carregarUltimasPartidas(timeAtual.id);
@@ -158,10 +156,10 @@ function preencherTabelaJogadores(jogadores) {
         const nome = jogador.name || '-';
         const posicao = traduzirPosicao(jogador.position);
         const dataNascimento = PortalBrasileirao.formatarData(jogador.dateOfBirth);
-        
+
         // IMPLEMENTAÇÃO DE ACESSIBILIDADE: Envolve a nacionalidade na tag lang="en"
-        const nacionalidade = jogador.nationality 
-            ? `<span lang="en">${jogador.nationality}</span>` 
+        const nacionalidade = jogador.nationality
+            ? `<span lang="en">${jogador.nationality}</span>`
             : '-';
 
         html += `
@@ -238,13 +236,13 @@ async function inicializarPaginaJogador() {
         document.getElementById('nome-jogador').textContent = jogador.name || '-';
         document.getElementById('numero-jogador').textContent = jogador.shirtNumber || '-';
         document.getElementById('posicao-jogador').textContent = traduzirPosicao(jogador.position);
-        
+
         // IMPLEMENTAÇÃO DE ACESSIBILIDADE: Usando innerHTML para aplicar a tag span com lang="en"
-        document.getElementById('nacionalidade-jogador').innerHTML = jogador.nationality 
-            ? `<span lang="en">${jogador.nationality}</span>` 
+        document.getElementById('nacionalidade-jogador').innerHTML = jogador.nationality
+            ? `<span lang="en">${jogador.nationality}</span>`
             : '-';
-        document.getElementById('nacionalidade-completa').innerHTML = jogador.nationality 
-            ? `<span lang="en">${jogador.nationality}</span>` 
+        document.getElementById('nacionalidade-completa').innerHTML = jogador.nationality
+            ? `<span lang="en">${jogador.nationality}</span>`
             : '-';
 
         document.getElementById('data-nascimento').textContent = PortalBrasileirao.formatarData(jogador.dateOfBirth);
@@ -256,7 +254,7 @@ async function inicializarPaginaJogador() {
         }
 
         const containerHistorico = document.querySelector('.timeline-historico');
-        
+
         if (containerHistorico) {
             if (jogador.currentTeam) {
                 let competicoesHtml = '';
@@ -275,7 +273,7 @@ async function inicializarPaginaJogador() {
                     <div style="display: flex; flex-direction: column; align-items: center; padding: 20px;">
                         <img src="${jogador.currentTeam.crest}" alt="Escudo" style="width: 90px; margin-bottom: 15px;" onerror="this.src='../Imagens/placeholder-escudo.png'">
                         <h3 style="color: var(--cor-primaria); margin-bottom: 10px;">${jogador.currentTeam.name}</h3>
-                        
+
                         <div style="display: flex; gap: 20px; justify-content: center; width: 100%; margin-bottom: 20px; border-top: 1px solid #eee; border-bottom: 1px solid #eee; padding: 15px 0; text-align: center;">
                             <div>
                                 <strong style="display: block; color: var(--cor-borda); font-size: 0.85rem;">ESTÁDIO</strong>
@@ -291,7 +289,7 @@ async function inicializarPaginaJogador() {
                         <div style="text-align: center;">
                             ${competicoesHtml}
                         </div>
-                        
+
                         <div style="margin-top: 20px; padding-top: 10px; text-align: center;">
                             <p style="color: #f39c12; font-size: 0.85rem;">⚠️ A API gratuita não fornece o histórico de transferências, apenas o clube atual.</p>
                         </div>
@@ -327,7 +325,7 @@ function calcularIdade(dataNascimento) {
 
 async function inicializarPaginaHistorico() {
     const urlParams = new URLSearchParams(window.location.search);
-    const idJogador = urlParams.get('id'); 
+    const idJogador = urlParams.get('id');
 
     if (!idJogador) {
         window.history.back();
@@ -342,7 +340,7 @@ async function inicializarPaginaHistorico() {
             if (nomeEl) nomeEl.textContent = jogador.name || 'Jogador';
 
             const timeline = document.getElementById('timeline-completa');
-            
+
             if (jogador.currentTeam) {
                 const elFundacao = document.getElementById('fundacao-clube');
                 if (elFundacao) elFundacao.textContent = jogador.currentTeam.founded || '-';
@@ -371,12 +369,12 @@ async function inicializarPaginaHistorico() {
                             <img src="${jogador.currentTeam.crest}" alt="Escudo do ${jogador.currentTeam.name}" style="width: 120px; margin-bottom: 15px;" onerror="this.src='../Imagens/placeholder-escudo.png'">
                             <h3 style="color: var(--cor-primaria); font-size: 24px; margin-bottom: 5px;">${jogador.currentTeam.name}</h3>
                             <p style="color: var(--cor-borda); font-weight: bold; margin-bottom: 30px;">Clube Atual</p>
-                            
+
                             <h4 style="margin-bottom: 20px; color: var(--cor-texto); font-size: 18px;">Competições em Disputa na Temporada</h4>
                             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 20px;">
                                 ${competicoesHtml}
                             </div>
-                            
+
                             <div style="margin-top: 30px; padding-top: 20px; border-top: 1px solid var(--cor-borda);">
                                 <p style="color: #f39c12; font-size: 0.9rem;">⚠️ Nota de Sistema: A API gratuita exibe apenas o contrato atual e as competições ativas.</p>
                             </div>
