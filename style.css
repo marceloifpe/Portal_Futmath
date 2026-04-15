@@ -1,5 +1,4 @@
 :root {
-    /* Cores Principais */
     --cor-primaria: #1a472a;
     --cor-secundaria: #f4d03f;
     --cor-destaque: #e74c3c;
@@ -8,14 +7,12 @@
     --cor-texto-claro: #ecf0f1;
     --cor-borda: #bdc3c7;
     --cor-hover: #16a085;
-    
-    /* Cores de Status */
+
     --cor-sucesso: #27ae60;
     --cor-aviso: #f39c12;
     --cor-erro: #e74c3c;
     --cor-info: #3498db;
-    
-    /* Tipografia */
+
     --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --fonte-titulo: 'Arial', sans-serif;
     --tamanho-base: 16px;
@@ -26,26 +23,22 @@
     --peso-normal: 400;
     --peso-medio: 500;
     --peso-bold: 700;
-    
-    /* Espaçamento */
+
     --espacamento-xs: 4px;
     --espacamento-sm: 8px;
     --espacamento-md: 16px;
     --espacamento-lg: 24px;
     --espacamento-xl: 32px;
     --espacamento-xxl: 48px;
-    
-    /* Sombras */
+
     --sombra-leve: 0 2px 4px rgba(0, 0, 0, 0.1);
     --sombra-media: 0 4px 8px rgba(0, 0, 0, 0.15);
     --sombra-forte: 0 8px 16px rgba(0, 0, 0, 0.2);
-    
-    /* Transições */
+
     --transicao-rapida: 0.2s ease;
     --transicao-normal: 0.3s ease;
     --transicao-lenta: 0.5s ease;
-    
-    /* Breakpoints */
+
     --breakpoint-mobile: 320px;
     --breakpoint-tablet: 768px;
     --breakpoint-desktop: 1024px;
@@ -350,10 +343,6 @@ a:hover {
     color: var(--cor-borda);
 }
 
-/* ============================================
-   SEÇÃO DE INFORMAÇÕES
-   ============================================ */
-
 .secao-informacoes {
     background-color: white;
     padding: var(--espacamento-xxl) 0;
@@ -394,10 +383,6 @@ a:hover {
     color: var(--cor-borda);
     font-size: var(--tamanho-pequeno);
 }
-
-/* ============================================
-   RODAPÉ
-   ============================================ */
 
 .rodape {
     background-color: var(--cor-primaria);
@@ -452,43 +437,38 @@ a:hover {
     margin: 0;
 }
 
-/* ============================================
-   RESPONSIVIDADE
-   ============================================ */
-
-/* Tablet */
 @media (max-width: 768px) {
     .container-cabecalho {
         flex-direction: column;
         gap: var(--espacamento-md);
     }
-    
+
     .navegacao-principal {
         justify-content: center;
         width: 100%;
     }
-    
+
     .menu-navegacao {
         gap: var(--espacamento-md);
     }
-    
+
     .titulo-principal {
         font-size: 20px;
     }
-    
+
     .titulo-secao {
         font-size: 20px;
     }
-    
+
     .descricao-principal {
         font-size: var(--tamanho-base);
     }
-    
+
     .grade-times {
         grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
         gap: var(--espacamento-md);
     }
-    
+
     .container-rodape {
         grid-template-columns: 1fr;
     }
@@ -501,61 +481,57 @@ a:hover {
         --espacamento-lg: 16px;
         --espacamento-xl: 24px;
     }
-    
+
     .logo {
         width: 40px;
         height: 40px;
     }
-    
+
     .titulo-principal {
         font-size: 18px;
     }
-    
+
     .menu-navegacao {
         gap: var(--espacamento-sm);
     }
-    
+
     .menu-navegacao a {
         padding: var(--espacamento-xs) var(--espacamento-sm);
         font-size: var(--tamanho-pequeno);
     }
-    
+
     .titulo-secao {
         font-size: 18px;
     }
-    
+
     .descricao-principal {
         font-size: var(--tamanho-pequeno);
     }
-    
+
     .botoes-filtro {
         gap: var(--espacamento-sm);
     }
-    
+
     .botao-filtro {
         padding: var(--espacamento-sm) var(--espacamento-md);
         font-size: var(--tamanho-pequeno);
     }
-    
+
     .grade-times {
         grid-template-columns: repeat(2, 1fr);
         gap: var(--espacamento-md);
     }
-    
+
     .escudo-time {
         width: 80px;
         height: 80px;
     }
-    
+
     .grade-informacoes {
         grid-template-columns: 1fr;
         gap: var(--espacamento-lg);
     }
 }
-
-/* ============================================
-   UTILITÁRIOS
-   ============================================ */
 
 .texto-centro {
     text-align: center;
@@ -602,12 +578,6 @@ a:hover {
     padding: 0;
 }
 
-
-/* ============================================
-   ESTILOS PARA PÁGINAS INTERNAS
-   ============================================ */
-
-/* Botão Voltar */
 .botao-voltar {
     display: inline-block;
     padding: var(--espacamento-sm) var(--espacamento-md);
@@ -856,7 +826,6 @@ a:hover {
     color: var(--cor-hover);
 }
 
-/* Página de Jogador */
 .secao-jogador {
     padding: var(--espacamento-xl) 0;
 }
@@ -923,7 +892,6 @@ a:hover {
     box-shadow: var(--sombra-leve);
 }
 
-/* Página de Partidas */
 .secao-partidas {
     padding: var(--espacamento-xl) 0;
 }
@@ -977,7 +945,6 @@ a:hover {
     text-transform: uppercase;
 }
 
-/* Página de Conquistas */
 .secao-conquistas {
     padding: var(--espacamento-xl) 0;
 }
@@ -1054,7 +1021,6 @@ a:hover {
     font-size: var(--tamanho-pequeno);
 }
 
-/* Página de Estatísticas */
 .secao-estatisticas {
     padding: var(--espacamento-xl) 0;
 }
@@ -1270,7 +1236,6 @@ a:hover {
     font-size: var(--tamanho-pequeno);
 }
 
-/* Página Contato */
 .secao-contato {
     padding: var(--espacamento-xl) 0;
 }
@@ -1285,73 +1250,11 @@ a:hover {
     padding: var(--espacamento-xl);
     border-radius: 8px;
     box-shadow: var(--sombra-leve);
-    
+
     max-width: 600px;
     width: 100%;
-    
+
     margin: 0 auto;
-}
-
-.formulario-contato {
-    display: flex;
-    flex-direction: column;
-    gap: var(--espacamento-lg);
-}
-
-.grupo-formulario {
-    display: flex;
-    flex-direction: column;
-}
-
-.label-formulario {
-    margin-bottom: var(--espacamento-sm);
-    font-weight: var(--peso-bold);
-    color: var(--cor-primaria);
-}
-
-.obrigatorio {
-    color: var(--cor-erro);
-}
-
-.input-formulario,
-.textarea-formulario {
-    padding: var(--espacamento-md);
-    border: 1px solid var(--cor-borda);
-    border-radius: 6px;
-    font-family: var(--fonte-principal);
-    font-size: var(--tamanho-base);
-    transition: all var(--transicao-rapida);
-}
-
-.input-formulario:focus,
-.textarea-formulario:focus {
-    outline: none;
-    border-color: var(--cor-primaria);
-    box-shadow: 0 0 0 3px rgba(26, 71, 42, 0.1);
-}
-
-.botao-enviar {
-    padding: var(--espacamento-md) var(--espacamento-lg);
-    background-color: var(--cor-primaria);
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: var(--peso-bold);
-    cursor: pointer;
-    transition: all var(--transicao-rapida);
-}
-
-.botao-enviar:hover {
-    background-color: var(--cor-hover);
-    transform: translateY(-2px);
-    box-shadow: var(--sombra-media);
-}
-
-.texto-info-formulario {
-    font-size: var(--tamanho-pequeno);
-    color: var(--cor-borda);
-    text-align: center;
-    margin: 0;
 }
 
 .secao-info-contato {
@@ -1396,10 +1299,10 @@ a:hover {
 }
 
 .icone-rede {
-    width: 24px;            /* Define a largura da imagem */
-    height: 24px;           /* Define a altura da imagem */
-    object-fit: contain;    /* Garante que a imagem não fique esticada/distorcida */
-    vertical-align: middle; /* Alinha a imagem perfeitamente com o texto */
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    vertical-align: middle;
 }
 
 .lista-tecnologias-contato {
@@ -1432,33 +1335,29 @@ a:hover {
     font-size: var(--tamanho-grande);
 }
 
-/* ============================================
-   RESPONSIVIDADE PARA PÁGINAS INTERNAS
-   ============================================ */
-
 @media (max-width: 768px) {
     .info-time-principal {
         flex-direction: column;
         text-align: center;
     }
-    
+
     .lista-menu-secundario {
         gap: var(--espacamento-md);
     }
-    
+
     .grade-informacoes-time {
         grid-template-columns: repeat(2, 1fr);
     }
-    
+
     .times-partida {
         flex-direction: column;
         gap: var(--espacamento-sm);
     }
-    
+
     .grid-contato {
         grid-template-columns: 1fr;
     }
-    
+
     .cartao-posicao {
         flex-direction: column;
         gap: var(--espacamento-lg);
@@ -1470,50 +1369,50 @@ a:hover {
         width: 80px;
         height: 80px;
     }
-    
+
     .avatar-jogador {
         width: 80px;
         height: 80px;
     }
-    
+
     .numero-grande {
         font-size: 36px;
     }
-    
+
     .grade-informacoes-time {
         grid-template-columns: 1fr;
     }
-    
+
     .tabela-jogadores {
         font-size: var(--tamanho-pequeno);
     }
-    
+
     .tabela-jogadores th,
     .tabela-jogadores td {
         padding: var(--espacamento-sm);
     }
-    
+
     .info-partida {
         flex-direction: column;
         gap: var(--espacamento-sm);
     }
-    
+
     .lista-funcionalidades {
         gap: var(--espacamento-md);
     }
-    
+
     .item-funcionalidade {
         gap: var(--espacamento-md);
     }
-    
+
     .icone-funcionalidade {
         font-size: 24px;
     }
-    
+
     .grade-tecnologias {
         grid-template-columns: 1fr;
     }
-    
+
     .bloco-codigo pre {
         font-size: 12px;
     }
