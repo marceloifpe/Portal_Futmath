@@ -58,13 +58,17 @@ Portal_Futmath/
 ├── README.md           # Este arquivo
 ├── Imagens/            # Ativos visuais (logos e fundos)
 └── paginas/            # Páginas internas do portal
-    ├── time.html       # Hub de informações do time selecionado
-    ├── elenco.html     # Lista de jogadores (uso de tabelas HTML)
-    ├── estatisticas.html # Dados de desempenho e artilharia
-    ├── conquistas.html # Histórico de títulos (via JSON local)
-    ├── contato.html    # Informações do desenvolvedor
-    ├── banco_titulos.json # Banco de dados local de conquistas
-    └── script-paginas.js # Lógica específica das páginas internas
+    ├── time.html                 # Detalhes do time
+    ├── banco_titulos.json        # Banco de dados local de conquistas
+    ├── elenco.html               # Lista de jogadores
+    ├── jogador.html              # Detalhes do jogador
+    ├── historico.html            # Histórico de clubes
+    ├── partidas.html             # Partidas do time
+    ├── conquistas.html           # Títulos e troféus
+    ├── estatisticas.html         # Dados gerais
+    ├── sobre.html                # Sobre o projeto
+    ├── contato.html              # Informações de contato
+    └── script-paginas.js         # Lógica das páginas internas
 ```
 
 
