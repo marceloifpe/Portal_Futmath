@@ -19,7 +19,6 @@ async function fazerRequisicaoApi(endpoint) {
     try {
         const chave = `cache_${endpoint}`;
 
-        // Verificar cache
         if (cache[chave] && (Date.now() - cache[chave].tempo) < CONFIGURACAO.tempoCache) {
             console.log(`Usando cache para: ${endpoint}`);
             return cache[chave].dados;
@@ -104,7 +103,6 @@ function selecionarTime(time) {
     localStorage.setItem('timeAtual', JSON.stringify(time));
     localStorage.setItem('serieAtual', serieAtual);
 
-    // CORREÇÃO: Devolvendo o redirecionamento para a página Hub do time!
     window.location.href = `paginas/time.html?id=${time.id}`;
 }
 
