@@ -8,10 +8,7 @@
     --cor-borda: #bdc3c7;
     --cor-hover: #16a085;
 
-    --cor-sucesso: #27ae60;
-    --cor-aviso: #f39c12;
     --cor-erro: #e74c3c;
-    --cor-info: #3498db;
 
     --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     --fonte-titulo: 'Arial', sans-serif;
@@ -20,7 +17,6 @@
     --tamanho-grande: 18px;
     --tamanho-titulo: 32px;
     --tamanho-subtitulo: 24px;
-    --peso-normal: 400;
     --peso-medio: 500;
     --peso-bold: 700;
 
@@ -37,12 +33,6 @@
 
     --transicao-rapida: 0.2s ease;
     --transicao-normal: 0.3s ease;
-    --transicao-lenta: 0.5s ease;
-
-    --breakpoint-mobile: 320px;
-    --breakpoint-tablet: 768px;
-    --breakpoint-desktop: 1024px;
-    --breakpoint-grande: 1280px;
 }
 
 * {
@@ -533,49 +523,8 @@ a:hover {
     }
 }
 
-.texto-centro {
-    text-align: center;
-}
-
-.texto-direita {
-    text-align: right;
-}
-
-.texto-esquerda {
-    text-align: left;
-}
-
 .oculto {
     display: none !important;
-}
-
-.visivel {
-    display: block !important;
-}
-
-.margem-superior {
-    margin-top: var(--espacamento-lg);
-}
-
-.margem-inferior {
-    margin-bottom: var(--espacamento-lg);
-}
-
-.margem-lateral {
-    margin-left: var(--espacamento-lg);
-    margin-right: var(--espacamento-lg);
-}
-
-.preenchimento {
-    padding: var(--espacamento-lg);
-}
-
-.sem-margem {
-    margin: 0;
-}
-
-.sem-preenchimento {
-    padding: 0;
 }
 
 .botao-voltar {
@@ -947,42 +896,6 @@ a:hover {
 
 .secao-conquistas {
     padding: var(--espacamento-xl) 0;
-}
-
-.grid-trofeus {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: var(--espacamento-lg);
-    margin-bottom: var(--espacamento-xl);
-}
-
-.cartao-trofeu {
-    background-color: white;
-    padding: var(--espacamento-lg);
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: var(--sombra-leve);
-    transition: all var(--transicao-normal);
-}
-
-.cartao-trofeu:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--sombra-media);
-}
-
-.icone-trofeu {
-    font-size: 48px;
-    margin-bottom: var(--espacamento-md);
-}
-
-.nome-trofeu {
-    font-weight: var(--peso-bold);
-    margin-bottom: var(--espacamento-sm);
-}
-
-.ano-trofeu {
-    color: var(--cor-borda);
-    font-size: var(--tamanho-pequeno);
 }
 
 .secao-tabela-titulos {

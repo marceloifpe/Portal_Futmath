@@ -60,9 +60,10 @@ Portal_Futmath/
 └── paginas/            # Páginas internas do portal
     ├── time.html                 # Detalhes do time
     ├── banco_titulos.json        # Banco de dados local de conquistas
+    ├── campeoes.json             # Carrega as informações dos maiores campeões da liga nacional
     ├── elenco.html               # Lista de jogadores
     ├── jogador.html              # Detalhes do jogador
-    ├── historico.html            # Histórico de clubes
+    ├── historico.html            # Histórico de maiores campeões da liga nacional
     ├── partidas.html             # Partidas do time
     ├── conquistas.html           # Títulos e troféus
     ├── estatisticas.html         # Dados gerais

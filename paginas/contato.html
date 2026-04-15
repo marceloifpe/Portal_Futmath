@@ -22,6 +22,7 @@
             <nav class="navegacao-principal">
                 <ul class="menu-navegacao">
                     <li><a href="../index.html">Início</a></li>
+                    <li><a href="paginas/historico.html">Histórico</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="contato.html" class="link-ativo">Contato</a></li>
                 </ul>
@@ -122,25 +123,6 @@
         </div>
     </footer>
 
-    <script src="../script.js"></script>
-    <script>
-        const formularioContato = document.getElementById('formulario-contato');
-
-        if (formularioContato) {
-            formularioContato.addEventListener('submit', function (evento) {
-                evento.preventDefault();
-
-                const nome = document.getElementById('nome-contato').value;
-                const email = document.getElementById('email-contato').value;
-                const assunto = document.getElementById('assunto-contato').value;
-                const mensagem = document.getElementById('mensagem-contato').value;
-
-                alert(`Obrigado, ${nome}! Sua mensagem foi recebida.\n\nEm um projeto real, esta mensagem seria enviada para: ${email}`);
-
-                formularioContato.reset();
-            });
-        }
-    </script>
 </body>
 
 </html>

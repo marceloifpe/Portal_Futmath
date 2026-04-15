@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Clube Atual e Competições - Portal Brasileirão">
-    <title>Clube e Competições - Portal Futmath</title>
+    <title>Histórico das Ligas - Portal Futmath</title>
     <link rel="stylesheet" href="../style.css">
 </head>
 
@@ -14,14 +13,14 @@
         <div class="container-cabecalho">
             <div class="logo-secao">
                 <a href="../index.html" style="display: flex; align-items: center; gap: 10px; text-decoration: none;">
-                    <img src="../Imagens/logo.jpg" alt="Logo Portal Futmath" class="logo"
-                        onerror="this.src='../Imagens/placeholder-escudo.png'">
+                    <img src="../Imagens/logo.jpg" alt="Logo" class="logo">
                     <h1 class="titulo-principal">Portal Futmath</h1>
                 </a>
             </div>
             <nav class="navegacao-principal">
                 <ul class="menu-navegacao">
                     <li><a href="../index.html">Início</a></li>
+                    <li><a href="paginas/historico.html">Histórico</a></li>
                     <li><a href="sobre.html">Sobre</a></li>
                     <li><a href="contato.html">Contato</a></li>
                 </ul>
@@ -30,70 +29,37 @@
     </header>
 
     <main class="conteudo-principal">
-        <section class="secao-historico-completo">
+        <section class="secao-historico">
             <div class="container">
-                <button class="botao-voltar" onclick="window.history.back()" title="Voltar para página anterior">
-                    <span>← Voltar</span>
-                </button>
+                <h2 class="titulo-pagina">Maiores Campeões das Ligas</h2>
 
-                <h2 class="titulo-pagina">Clube Atual e Competições - <span
-                        id="nome-jogador-historico">Carregando...</span></h2>
-
-                <div class="timeline-completa" id="timeline-completa">
-                    <p class="mensagem-carregamento">Carregando dados do clube e competições...</p>
+                <div class="secao-filtro">
+                    <div class="botoes-filtro">
+                        <button class="botao-filtro ativo" id="btn-hist-br">Série A (Brasil)</button>
+                        <button class="botao-filtro" id="btn-hist-en">Premier League (Inglaterra)</button>
+                    </div>
                 </div>
 
-                <section class="secao-estatisticas-carreira" style="margin-top: 40px;">
-                    <h3 class="titulo-secao">Informações do Clube</h3>
-                    <div class="grade-stats-carreira"
-                        style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
-                        <div class="cartao-stat">
-                            <h4 class="titulo-stat">Fundação</h4>
-                            <p id="fundacao-clube" class="valor-stat">-</p>
-                        </div>
-                        <div class="cartao-stat">
-                            <h4 class="titulo-stat">Estádio</h4>
-                            <p id="estadio-clube" class="valor-stat" style="font-size: 18px; color: var(--cor-texto);">
-                                - </p>
-                        </div>
-                        <div class="cartao-stat">
-                            <h4 class="titulo-stat">Cores</h4>
-                            <p id="cores-clube" class="valor-stat" style="font-size: 16px; color: var(--cor-texto);"> -
-                            </p>
-                        </div>
-                    </div>
-                </section>
+                <div class="tabela-responsiva margem-superior">
+                    <table class="tabela-jogadores">
+                        <thead>
+                            <tr>
+                                <th>Clube</th>
+                                <th>Títulos</th>
+                                <th>Anos das Conquistas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="corpo-tabela-historico">
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </section>
     </main>
 
     <footer class="rodape">
-        <div class="container-rodape">
-            <div class="secao-rodape">
-                <h5 class="titulo-rodape">Sobre o Projeto</h5>
-                <p class="texto-rodape">Portal Brasileirão é um projeto desenvolvido para a disciplina de
-                    Desenvolvimento Web do Professor Fabio, criado por Marcelo.</p>
-            </div>
-            <div class="secao-rodape">
-                <h5 class="titulo-rodape">Tecnologias</h5>
-                <ul class="lista-rodape">
-                    <li><span>HTML5</span></li>
-                    <li><span>CSS3</span></li>
-                    <li><span>JavaScript</span></li>
-                    <li><span>API football-data.org</span></li>
-                </ul>
-            </div>
-            <div class="secao-rodape">
-                <h5 class="titulo-rodape">Links Úteis</h5>
-                <ul class="lista-rodape">
-                    <li><a href="sobre.html">Sobre</a></li>
-                    <li><a href="contato.html">Contato</a></li>
-                </ul>
-            </div>
-        </div>
         <div class="rodape-inferior">
-            <p class="texto-copyright">&copy; 2026 Portal Brasileirão. Desenvolvido por Marcelo. Todos os direitos
-                reservados.</p>
+            <p class="texto-copyright">&copy; 2026 Portal Futmath. Desenvolvido por Marcelo.</p>
         </div>
     </footer>
 

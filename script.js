@@ -1,36 +1,14 @@
-/* ============================================
-   PORTAL BRASILEIRÃO - SCRIPT PRINCIPAL
-   Desenvolvido por: Marcelo
-   Disciplina: Desenvolvimento Web - Prof. Fabio
-   ============================================ */
-
-// ============================================
-// CONSTANTES E CONFIGURAÇÕES
-// ============================================
-
 const CONFIGURACAO = {
-    // Trocamos para .org para evitar o Erro 522 de timeout
-    urlApi: 'https://api.football-data.org/v4', // URL base da API
-    chaveApi: '9c4b82e03de44aa4824b2c59c3a005e5', // Mantenha a sua chave
+    urlApi: 'https://api.football-data.org/v4',
+    chaveApi: '9c4b82e03de44aa4824b2c59c3a005e5',
     idSerieA: 2013,
-    idSerieB: 2021, // Premier League
-    limiteRequisicoes: 10, // Por minuto
-    tempoCache: 3600000, // 1 hora em milissegundos
+    idSerieB: 2021,
+    limiteRequisicoes: 10,
+    tempoCache: 3600000,
 };
 
-// ============================================
-// VARIÁVEIS GLOBAIS
-// ============================================
-
 let serieAtual = 'A';
-let timesCarregados = {};
-let jogadoresCarregados = {};
-let partidasCarregadas = {};
 let cache = {};
-
-// ============================================
-// FUNÇÕES UTILITÁRIAS
-// ============================================
 
 /**
  * Faz uma requisição GET para a API
@@ -62,7 +40,6 @@ async function fazerRequisicaoApi(endpoint) {
 
         const dados = await resposta.json();
 
-        // Armazenar em cache
         cache[chave] = {
             dados: dados,
             tempo: Date.now()
@@ -165,21 +142,15 @@ async function carregarTimes(serie) {
             gradeElemento.appendChild(cartao);
         });
 
-        timesCarregados[serie] = dados.teams;
-
     } catch (erro) {
         console.error('Erro ao carregar times:', erro);
         mostrarMensagemErro('Erro ao carregar times. Tente novamente mais tarde.');
     }
 }
 
-// ============================================
-// FUNÇÃO PARA TROCAR O BACKGROUND (ADICIONADA)
-// ============================================
 function alternarBackground(serie) {
     const secaoHero = document.querySelector('.secao-apresentacao');
-    
-    // Previne erros caso a seção não exista na página
+
     if (!secaoHero) return;
 
     if (serie === 'A') {
@@ -199,7 +170,7 @@ function inicializarFiltros() {
         botaoSerieA.addEventListener('click', () => {
             botaoSerieA.classList.add('ativo');
             botaoSerieB.classList.remove('ativo');
-            alternarBackground('A'); // <--- ADICIONADO AQUI
+            alternarBackground('A');
             carregarTimes('A');
         });
     }
@@ -208,7 +179,7 @@ function inicializarFiltros() {
         botaoSerieB.addEventListener('click', () => {
             botaoSerieB.classList.add('ativo');
             botaoSerieA.classList.remove('ativo');
-            alternarBackground('B'); // <--- ADICIONADO AQUI
+            alternarBackground('B');
             carregarTimes('B');
         });
     }
@@ -220,7 +191,7 @@ function inicializarPagina() {
         console.warn('⚠️ Chave da API não configurada! Substitua a chave padrão pela sua chave do football-data.org');
     }
     inicializarFiltros();
-    alternarBackground('A'); // <--- ADICIONADO AQUI (Garante o fundo da Série A ao carregar o site)
+    alternarBackground('A');
     carregarTimes('A');
 }
 
