@@ -463,7 +463,6 @@ a:hover {
     }
 }
 
-/* Mobile */
 @media (max-width: 480px) {
     :root {
         --tamanho-base: 14px;
@@ -544,7 +543,6 @@ a:hover {
     transform: translateX(-4px);
 }
 
-/* Página do Time */
 .secao-detalhes-time {
     padding: var(--espacamento-xl) 0;
 }
@@ -1019,7 +1017,6 @@ a:hover {
     border-bottom: 1px solid var(--cor-borda);
 }
 
-/* Página Sobre */
 .secao-sobre {
     padding: var(--espacamento-xl) 0;
 }
