@@ -88,7 +88,6 @@ async function carregarUltimasPartidas(idTime) {
   }
 }
 
-let elencoCompleto = [];
 let posicaoFiltrada = "todos";
 
 function traduzirPosicao(posicaoIngles) {
@@ -129,8 +128,7 @@ async function inicializarPaginaElenco() {
       return;
     }
 
-    elencoCompleto = detalhes.squad;
-    preencherTabelaJogadores(elencoCompleto);
+    preencherTabelaJogadores(detalhes.squad);
 
     document.querySelectorAll(".botao-filtro-pos").forEach((botao) => {
       botao.addEventListener("click", function () {
@@ -261,7 +259,6 @@ async function inicializarPaginaJogador() {
       jogador.position,
     );
 
-    // IMPLEMENTAÇÃO DE ACESSIBILIDADE: Usando innerHTML para aplicar a tag span com lang="en"
     document.getElementById("nacionalidade-jogador").innerHTML =
       jogador.nationality
         ? `<span lang="en">${jogador.nationality}</span>`
@@ -353,7 +350,6 @@ function calcularIdade(dataNascimento) {
   return idade;
 }
 
-// === NOVA FUNÇÃO PARA O HISTÓRICO DE LIGAS (SUBSTITUI A ANTIGA) ===
 async function inicializarPaginaHistoricoLigas() {
   const btnBr = document.getElementById("btn-hist-br");
   const btnEn = document.getElementById("btn-hist-en");
@@ -379,7 +375,6 @@ async function inicializarPaginaHistoricoLigas() {
       corpoTabela.innerHTML = html;
     };
 
-    // Eventos dos botões
     if (btnBr && btnEn) {
       btnBr.addEventListener("click", () => {
         btnBr.classList.add("ativo");
@@ -394,7 +389,6 @@ async function inicializarPaginaHistoricoLigas() {
       });
     }
 
-    // Inicia com Série A
     renderizar("serieA");
   } catch (erro) {
     console.error("Erro ao carregar campeões:", erro);
@@ -402,7 +396,6 @@ async function inicializarPaginaHistoricoLigas() {
       '<tr><td colspan="3" style="text-align: center; color: red;">Erro ao carregar dados históricos. Verifique o arquivo campeoes.json.</td></tr>';
   }
 }
-// ==================================================================
 
 let partidasGlobais = [];
 let tipoPartidaAtual = "proximas";
@@ -819,7 +812,6 @@ async function inicializarPaginaConquistas() {
   }
 }
 
-// === ROUTER ATUALIZADO NO FINAL DO ARQUIVO ===
 document.addEventListener("DOMContentLoaded", function () {
   const caminhoAtual = window.location.pathname;
 
@@ -836,6 +828,6 @@ document.addEventListener("DOMContentLoaded", function () {
   } else if (caminhoAtual.includes("conquistas.html")) {
     inicializarPaginaConquistas();
   } else if (caminhoAtual.includes("historico.html")) {
-    inicializarPaginaHistoricoLigas(); // <-- Agora chama a função nova
+    inicializarPaginaHistoricoLigas();
   }
 });
